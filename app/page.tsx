@@ -3,8 +3,7 @@ import Prin from "./pages";
 
 export default function Home() {
   return (
-    <main className="">
-        Movies          
+    <main className="">       
         <Prin />
     </main>
 
