@@ -67,9 +67,9 @@ const Prin: React.FC = () => {
       <div className="flex flex-wrap justify-center">
         {movies.map((movie) => (
 
-            <a key={movie.id} href={`/movies/${movie.id}`}>
+            
             <MovieCard movie={movie} />
-            </a>
+            
         ))}
       </div>
     </div>

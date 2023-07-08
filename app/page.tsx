@@ -3,7 +3,7 @@ import Prin from "./pages";
 
 export default function Home() {
   return (
-    <main className="">       
+    <main >       
         <Prin />
     </main>
 

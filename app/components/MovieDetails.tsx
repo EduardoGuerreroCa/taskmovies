@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 
 interface MovieDetailsProps {
@@ -7,8 +8,13 @@ interface MovieDetailsProps {
     release_date: string;
   };
 }
+const router = useRouter();
+const id = router.query.id;
 
 const MovieDetails: React.FC<MovieDetailsProps> = ({ movie }) => {
+
+
+  console.log("Leyendo: "+ {id})
   return (
     <div>
       <h1 className="text-2xl font-bold mb-2">{movie.title}</h1>

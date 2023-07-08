@@ -15,17 +15,20 @@ interface MoviePageProps {
 }
 
 const MoviePage: React.FC<MoviePageProps> = ({ movie }) => {
+
   return (
     <div>
       <MovieDetails movie={movie} />
     </div>
   );
 };
-
+const router = useRouter();
+const {id} = router.query;
 console.log("Llego aqui");
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
-  const { id } = context.query;
+
+
   const response = await axios.get(
     `https://api.themoviedb.org/3/movie/${id}?api_key=4f298a53e552283bee957836a529baec`
     
